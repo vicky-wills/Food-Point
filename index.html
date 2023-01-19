@@ -13,17 +13,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-------------- Fonts -------------->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap"
         rel="stylesheet">
 
-
     <!-------------- CSS -------------->
-
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-------------- carousel -------------->
+    <script src="assets/js/carousel.js"></script>
 
 </head>
 
@@ -387,26 +387,44 @@
     </section>
 
     <section class="testimonials">
-        <div class="test-head">
-            <div>
-                <img src="assets/images/home/Profile.png" alt="">
-            </div>
-
-            <div class="test-body">
+        <div class="test-slider" id="carousel">
+            <div class="test-slide active">
                 <div>
-                    <h3>Donald Lewis</h3>
-                    <p class="sub">New York, USA</p>
+                    <img src="assets/images/home/Profile.png" alt="">
                 </div>
-                <p class="test-content">“Since I have started using Food Point, I have never opened another
-                    app….EVER!!!”</p>
+
+                <div class="test-body">
+                    <div>
+                        <h3>Donald Lewis</h3>
+                        <p class="sub">New York, USA</p>
+                    </div>
+                    <p class="test-content">“Since I have started using Food Point, I have never opened another
+                        app….EVER!!!”</p>
+                </div>
+                <div>
+                    <img src="assets/images/home/icons/double-quotes.svg" alt="">
+                </div>
             </div>
-            <div>
-                <img src="assets/images/home/icons/double-quotes.svg" alt="">
+            <div class="test-slide">
+                <div>
+                    <img src="assets/images/home/Profile2.png" alt="">
+                </div>
+
+                <div class="test-body">
+                    <div>
+                        <h3>Chuck Lofton</h3>
+                        <p class="sub">Michigan, USA</p>
+                    </div>
+                    <p class="test-content">“Wow…. this is the best ever”</p>
+                </div>
+                <div>
+                    <img src="assets/images/home/icons/double-quotes.svg" alt="">
+                </div>
             </div>
         </div>
-        <div class="test-footer">
-            <span></span>
-            <span></span>
+        <div class="test-inticator">
+            <span data-target="#carousel" data-slide-to="0" class="active"></span>
+            <span data-target="#carousel" data-slide-to="1"></span>
         </div>
     </section>
 
