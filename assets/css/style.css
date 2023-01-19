@@ -118,6 +118,16 @@ p.sub {
     letter-spacing: 0.15px;
 }
 
+a.sub {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.15px;
+    color: var(--grey-500);
+    transition: ease-in 150ms;
+    cursor: pointer;
+}
+
 button {
     position: relative;
     display: flex;
@@ -393,11 +403,19 @@ button:not(.hero-cta2):hover {
 }
 
 .card-item {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-item img {
     transition: ease-out 150ms;
 }
 
-.food-card:hover .card-item {
-    transform: scale(1.1);
+.food-card:hover .card-item img {
+    transform: scale(1.08);
 }
 
 .offer {
@@ -561,12 +579,33 @@ button:not(.hero-cta2):hover {
     border-radius: 3px;
 }
 
+.booking-body form input:focus {
+    border: 1px solid var(--primary);
+    outline: none;
+}
+
 .booking-body form input ::placeholder {
     font-size: 16px;
     font-weight: 500;
     line-height: 19px;
     letter-spacing: 0.15px;
     color: var(--grey-500);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.booking-body form button {
+    margin-top: 12px;
 }
 
 /* testimonials */
@@ -708,18 +747,40 @@ button:not(.hero-cta2):hover {
     background-color: var(--primary);
 }
 
+.footer-logo button:hover {
+    background-color: var(--primary-variant);
+}
+
+.footer-logo button:active {
+    border: none;
+    outline: none;
+}
+
 .footer-logo input {
+    display: flex;
+    gap: 10px;
     background-color: transparent;
     border: none;
     color: var(--white) !important;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
+    width: 158px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
-.footer-logo input ::placeholder {
+.footer-logo input::placeholder {
     color: var(--white) !important;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+
+.footer-logo input:active {
+    border: none;
+    outline: none;
 }
 
 .footer-body {
@@ -740,6 +801,32 @@ button:not(.hero-cta2):hover {
     gap: 8px;
 }
 
+.foo_social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    cursor: pointer;
+    transition: ease-in 150ms;
+    cursor: pointer;
+}
+
+.foo_social svg {
+    transition: ease-in 150ms;
+}
+
+.foo_social:hover {
+    background-color: var(--primary-variant);
+}
+
+.foo_social:hover svg {
+    color: #fff;
+    transform: scale(1.3);
+}
+
 .foo-section .app {
     display: flex;
     flex-direction: column;
@@ -748,6 +835,17 @@ button:not(.hero-cta2):hover {
 
 .foo-section h4 {
     margin-bottom: 18px;
+    cursor: pointer;
+    transition: ease-in 150ms;
+}
+
+.foo-section h4:hover {
+    color: var(--primary);
+}
+
+.foo-section p {
+    color: var(--grey-500);
+    cursor: pointer;
 }
 
 .footer-footer {
@@ -755,6 +853,14 @@ button:not(.hero-cta2):hover {
     justify-content: space-between;
     border-top: 1px solid var(--shades-200);
     padding: 24px 8%;
+}
+
+.footer-footer p {
+    color: var(--grey-900);
+}
+
+.footer-footer div a {
+    color: var(--grey-900);
 }
 
 .footer-footer div {
