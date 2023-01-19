@@ -690,20 +690,60 @@ button:not(.hero-cta2):hover {
 .footer-head {
     display: flex;
     gap: 160px;
+    width: 100%;
+    padding: 0px 8%;
 }
 
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
+.footer-logo p {
+    width: 320px;
+}
 
+.footer-logo button {
+    background-color: var(--primary);
+}
+
+.footer-logo input {
+    background-color: transparent;
+    border: none;
+    color: var(--white) !important;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-logo input ::placeholder {
+    color: var(--white) !important;
+    font-size: 16px;
+    font-weight: 600;
+}
 
 .footer-body {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .foo-section {
     display: flex;
     flex-direction: column;
     gap: 18px;
+}
+
+.foo-section div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.foo-section .app {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .foo-section h4 {
@@ -714,7 +754,7 @@ button:not(.hero-cta2):hover {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid var(--shades-200);
-    padding: 24px 0px;
+    padding: 24px 8%;
 }
 
 .footer-footer div {
