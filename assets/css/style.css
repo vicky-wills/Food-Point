@@ -165,10 +165,11 @@ button {
 
 .hero {
     position: relative;
+    display: flex;
+    align-items: center;
     width: 100%;
-    min-height: 100vh;
-    background-color: #16A34A;
     height: 100vh;
+    background-color: var(--bg);
 }
 
 .logo {
@@ -250,16 +251,26 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 84px;
+    padding: 0px 8%;
     width: 100%;
-    background-color: #0F172A;
+    overflow: hidden;
+}
+
+.hero-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
     gap: 48px;
-    background-color: #16A34A;
 }
 
 .hero-title {
@@ -304,19 +315,6 @@ button:not(.hero-cta2):hover {
 
 .hero-cta2:hover img {
     transform: rotate(120deg);
-}
-
-.hero-img {
-    position: relative;
-    height: auto;
-    width: 50%;
-    overflow: hidden;
-}
-
-.hero-img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 }
 
 @media screen and (max-width: 1600px) and (min-width: 600px) {
@@ -371,6 +369,19 @@ button:not(.hero-cta2):hover {
 
     h2.display span {
         font-size: 48px;
+    }
+
+}
+
+@media screen and (max-width: 1600px) and (min-width: 600px) {
+
+    .hero-img {
+        padding: 20px 0px;
+    }
+
+    .hero-img img {
+        width: 100%;
+        height: 100%;
     }
 
 }
@@ -623,6 +634,24 @@ button:not(.hero-cta2):hover {
     bottom: 4%;
 }
 
+@media screen and (max-width: 1600px) and (min-width: 600px) {
+
+    .tomato {
+        position: absolute;
+        left: 4%;
+        top: 4%;
+        transform: scale(0.9);
+    }
+
+    .chilli {
+        position: absolute;
+        right: 0%;
+        bottom: 2%;
+        transform: scale(0.9);
+    }
+
+}
+
 @media screen and (max-width: 1024px) {
 
     .tomato {
@@ -645,6 +674,7 @@ button:not(.hero-cta2):hover {
     align-items: center;
     padding: 100px 0px;
     background-color: var(--bg2);
+    flex-wrap: wrap;
 }
 
 .booking-body {
@@ -700,6 +730,27 @@ input[type=number] {
 .booking-body form button {
     margin-top: 12px;
 }
+
+@media screen and (max-width: 1280px) {
+
+    .booking-body form input {
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .booking-body {
+        align-items: center;
+    }
+
+    .booking-body form {
+        align-items: center;
+    }
+
+}
+
 
 /* testimonials */
 
@@ -871,7 +922,7 @@ input[type=number] {
 .footer-head {
     display: flex;
     justify-content: space-between;
-    gap: 96px;
+    gap: 72px;
     width: 100%;
     padding: 0px 8%;
     flex-wrap: wrap;
@@ -929,7 +980,7 @@ input[type=number] {
 
 .footer-body {
     display: flex;
-    gap: 72px;
+    gap: 120px;
     width: max-content;
     flex-wrap: wrap;
 }
@@ -1016,4 +1067,16 @@ input[type=number] {
 .footer-footer div {
     display: flex;
     gap: 24PX;
+}
+
+@media screen and (max-width: 1600px) and (min-width: 600px) {
+
+    .footer-head {
+        gap: 72px;
+    }
+
+    .footer-body {
+        gap: 72px;
+    }
+
 }
