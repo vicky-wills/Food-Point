@@ -21,7 +21,7 @@
 
     <!-------------- CSS -------------->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
     <!-------------- carousel -------------->
     <script src="assets/js/carousel.js"></script>
 
@@ -30,28 +30,30 @@
 <body>
 
     <section class="hero">
-        <header>
-            <div class="logo">
-                <img src="assets/images/home/logo.png" alt="logo">
-            </div>
-            <div class="navbar">
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Booking Table</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">About Us</a></li>
-                </ul>
-                <div class="nav-icons">
-                    <a href="#">
-                        <img src="assets/images/home/icons/search.svg" alt="search">
-                    </a>
-                    <a href="#">
-                        <img src="assets/images/home/icons/cart.svg" alt="cart">
-                    </a>
-                    <a href="#">
-                        <img src="assets/images/home/icons/profile.svg" alt="profile">
-                    </a>
+        <header class="sticky">
+            <div class="header">
+                <div class="logo">
+                    <img src="assets/images/home/logo.png" alt="logo">
+                </div>
+                <div class="navbar">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Booking Table</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                    <div class="nav-icons">
+                        <a href="#">
+                            <img src="assets/images/home/icons/search.svg" alt="search">
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/home/icons/cart.svg" alt="cart">
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/home/icons/profile.svg" alt="profile">
+                        </a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -70,7 +72,9 @@
                             alt="play"></button>
                 </div>
             </div>
-            <img src="assets/images/home/hero.png" alt="hero-img">
+            <div class="hero-img">
+                <img src="assets/images/home/hero.png" alt="hero-img">
+            </div>
         </div>
     </section>
 
@@ -429,14 +433,16 @@
     </section>
 
     <section class="discount">
-        <div>
-            <h2 class="display">December sale is on!
-                with big <span>Discount...</span></h2>
+        <div class="discount-content">
             <div>
-                <img src="assets/images/home/icons/offer.svg" alt="" width="235px">
+                <h2 class="display">December sale is on!
+                    with big <span>Discount...</span></h2>
+                <div>
+                    <img src="assets/images/home/icons/offer.svg" alt="" width="235px">
+                </div>
             </div>
+            <button class="btn-l">Order Now</button>
         </div>
-        <button class="btn-l">Order Now</button>
         <div class="melon">
             <img src="assets/images/home/melon.png" alt="">
         </div>
@@ -502,8 +508,12 @@
                 <div class="foo-section">
                     <h4 class="display">Discover Our App</h4>
                     <div class="app">
-                        <img src="assets/images/home/Mac.png" alt="">
-                        <img src="assets/images/home/Play.png" alt="">
+                        <a href="#">
+                            <img src="assets/images/home/Mac.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/home/Play.png" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -516,7 +526,6 @@
             </div>
         </div>
     </section>
-
 
 </body>
 

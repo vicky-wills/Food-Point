@@ -167,6 +167,8 @@ button {
     position: relative;
     width: 100%;
     min-height: 100vh;
+    background-color: #16A34A;
+    height: 100vh;
 }
 
 .logo {
@@ -175,12 +177,23 @@ button {
 
 header {
     position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.header {
+    position: relative;
     display: flex;
     padding: 20px 8%;
     width: 100%;
     background-color: var(--bg);
     justify-content: space-between;
     z-index: 1;
+}
+
+.sticky .header {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -228,30 +241,25 @@ header {
     font-weight: 600;
 }
 
-/* .navbar ul a:hover {
-    color: var(--primary);
-} */
-
 .nav-icons {
     display: flex;
     gap: 16px;
 }
 
 .hero-body {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0% 8%;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 84px;
+    width: 100%;
+    background-color: #0F172A;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
     gap: 48px;
+    background-color: #16A34A;
 }
 
 .hero-title {
@@ -298,6 +306,75 @@ button:not(.hero-cta2):hover {
     transform: rotate(120deg);
 }
 
+.hero-img {
+    position: relative;
+    height: auto;
+    width: 50%;
+    overflow: hidden;
+}
+
+.hero-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1600px) and (min-width: 600px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+
+    h6 {
+        font-size: 12px;
+    }
+
+    p.sub {
+        font-size: 17px;
+    }
+
+    a.sub {
+        font-size: 17px;
+    }
+
+    .hero-title h1 {
+        width: 680px;
+    }
+
+    h1.display {
+        font-size: 60px;
+    }
+
+    h1.display span {
+        font-size: 60px;
+    }
+
+    h2.display {
+        font-size: 48px;
+    }
+
+    h2.display span {
+        font-size: 48px;
+    }
+
+}
+
 /* features */
 
 .features {
@@ -307,6 +384,7 @@ button:not(.hero-cta2):hover {
     padding: 100px 0px;
     background-color: var(--bg2);
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .feature {
@@ -340,7 +418,7 @@ button:not(.hero-cta2):hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 100px 0px;
+    padding: 100px 8%;
     gap: 48px;
 }
 
@@ -387,6 +465,8 @@ button:not(.hero-cta2):hover {
 .food-row {
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .food-card {
@@ -541,6 +621,18 @@ button:not(.hero-cta2):hover {
     position: absolute;
     right: 2%;
     bottom: 4%;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .tomato {
+        display: none;
+    }
+
+    .chilli {
+        display: none;
+    }
+
 }
 
 /* booking */
@@ -699,14 +791,20 @@ input[type=number] {
 .discount {
     position: relative;
     display: flex;
-    flex-direction: column;
-    padding: 100px 8%;
-    gap: 48px;
+    justify-content: space-between;
     background-color: var(--bg2);
-    overflow: hidden;
+    align-items: center;
+    width: 100%;
 }
 
-.discount div {
+.discount-content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 100px 0% 100px 8%;
+}
+
+.discount-content div {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -717,27 +815,66 @@ input[type=number] {
 }
 
 .melon {
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: relative;
+    height: 522px;
+    width: 50%;
+    overflow: hidden;
 }
+
+.melon img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 1600px) and (min-width: 600px) {
+
+    .discount div h2 {
+        width: 500px;
+    }
+
+}
+
 
 /* footer */
 
 .footer {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 100px;
     width: 100%;
     padding-top: 100px;
     background-color: var(--bg);
+    overflow: hidden;
+    z-index: 0;
 }
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../images/home/footer-bg.png);
+    background-size: cover;
+    background-position: top center;
+    mix-blend-mode: darken;
+    opacity: 0.014;
+    z-index: -1;
+    pointer-events: none;
+}
+
 
 .footer-head {
     display: flex;
-    gap: 160px;
+    justify-content: space-between;
+    gap: 96px;
     width: 100%;
     padding: 0px 8%;
+    flex-wrap: wrap;
 }
 
 .footer-logo {
@@ -792,8 +929,9 @@ input[type=number] {
 
 .footer-body {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    gap: 72px;
+    width: max-content;
+    flex-wrap: wrap;
 }
 
 .foo-section {
@@ -860,6 +998,11 @@ input[type=number] {
     justify-content: space-between;
     border-top: 1px solid var(--shades-200);
     padding: 24px 8%;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
 }
 
 .footer-footer p {
