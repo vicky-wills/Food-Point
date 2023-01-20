@@ -878,7 +878,6 @@ input[type=number] {
     object-fit: cover;
 }
 
-
 @media screen and (max-width: 1600px) and (min-width: 600px) {
 
     .discount div h2 {
@@ -1077,6 +1076,33 @@ input[type=number] {
 
     .footer-body {
         gap: 72px;
+    }
+
+}
+
+@media screen and (max-width: 1600px) {
+
+    .features,
+    .food-menu,
+    .booking,
+    .testimonials {
+        padding: 80px 0px;
+    }
+
+    .discount-content {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        padding: 80px 0% 80px 8%;
+    }
+
+    .melon {
+        height: 454px;
+    }
+
+    .footer {
+        gap: 80px;
+        padding-top: 80px;
     }
 
 }
